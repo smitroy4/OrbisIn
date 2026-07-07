@@ -73,7 +73,13 @@
             <artifactId>modelmapper</artifactId>
             <version>3.2.6</version>
         </dependency>
-	</dependencies>
+        <dependency>
+            <groupId>com.smit.orbisIn</groupId>
+            <artifactId>userService</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
