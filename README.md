@@ -1,6 +1,6 @@
 <div align="center">
 
-# OrbisIn
+# Roadmap to - **OrbisIn**
 
 ### A LinkedIn-inspired professional networking backend built with Spring Boot Microservices
 
@@ -15,7 +15,7 @@
 
 ---
 
-## Overview
+## Overview of the System Design
 
 **OrbisIn** is a production-grade, event-driven microservices backend that replicates the core domain of a professional social network. Built entirely in Java 21 with Spring Boot and Spring Cloud, the system is designed around the principle of **database-per-service**, with each service owning its data store and communicating asynchronously through Apache Kafka.
 
@@ -23,7 +23,7 @@ The connections graph is powered by **Neo4j**, making first-degree and multi-hop
 
 ---
 
-## Architecture
+## Proposed Architecture
 
 ```
                         ┌─────────────────────────────────────────────────────┐
@@ -67,7 +67,7 @@ All services register with the **Eureka Discovery Server**. The API Gateway reso
 
 ---
 
-## Services
+## Services Designed
 
 | Service | Port | Database | Description |
 |---|---|---|---|
@@ -81,7 +81,7 @@ All services register with the **Eureka Discovery Server**. The API Gateway reso
 
 ---
 
-## Key Design Decisions
+## Key Design Decisions Designed
 
 **Neo4j for the Connections Graph**
 Social connections are inherently graph data. The `CONNECTED_TO` and `REQUESTED_TO` Cypher relationships make first-degree traversal and request lifecycle management natural, without complex JOIN tables.
@@ -97,7 +97,7 @@ Each service contains a `FeignClientInterceptor` that copies the `userId` header
 
 ---
 
-## API Reference
+## API Reference Decided
 
 All routes are accessed through the API Gateway at `http://localhost:8080`.
 
@@ -126,7 +126,7 @@ All routes are accessed through the API Gateway at `http://localhost:8080`.
 
 ---
 
-## Kafka Events
+## Kafka Events Planned
 
 | Topic | Published By | Consumed By | Payload |
 |---|---|---|---|
@@ -136,7 +136,7 @@ All routes are accessed through the API Gateway at `http://localhost:8080`.
 
 ---
 
-## Tech Stack
+## Tech Stack Strategized
 
 | Layer | Technology |
 |---|---|
@@ -154,7 +154,7 @@ All routes are accessed through the API Gateway at `http://localhost:8080`.
 
 ---
 
-## Running Locally
+## Will be Running Locally
 
 ### Prerequisites
 
@@ -204,7 +204,7 @@ All services auto-register with Eureka at `http://localhost:8761`.
 
 ---
 
-## Kubernetes Deployment
+## Kubernetes Deployment Planned
 
 Full Kubernetes manifests are in the `/k8s` directory, targeting GKE with a GCE Ingress.
 
@@ -227,7 +227,7 @@ Each service has a corresponding `application-k8s.properties` profile that overr
 
 ---
 
-## Project Structure
+## Project Structure Designed
 
 ```
 OrbisIn/
