@@ -246,7 +246,7 @@ OrbisIn/
 ## Author
 
 **Smit Roy**
-MCA — Cloud Computing | Associate Web Developer → Java Backend Developer
+MCA — Cloud Computing | Java Backend Developer
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-smitroy.com-black?style=flat-square&logo=vercel)](https://smitroy.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-smitroy22-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/smitroy22)
