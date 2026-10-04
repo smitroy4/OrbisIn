@@ -31,3 +31,5 @@ spring:
             - Path=/api/v1/connections/**
           filters:
             - StripPrefix=2
+jwt:
+  secretKey: ${JWT_SECRET_KEY}

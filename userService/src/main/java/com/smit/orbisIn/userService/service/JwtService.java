@@ -17,7 +17,24 @@ public class JwtService {
     private String jwtSecretKey;
 
     private SecretKey getSecretKey() {
-        return Keys.hmacShaKeyFor(jwtSecretKey.getBytes(StandardCharsets.UTF_8));
+        return Keys.hmacShaKeyFor(
+                jwtSecretKey.getBytes(StandardCharsets.UTF_8)
+        );
+    }
+
+    public Long validateAndGetUserId(String token) {
+        try {
+            var claims = Jwts.parser()
+                    .verifyWith(getSecretKey())
+                    .build()
+                    .parseSignedClaims(token)
+                    .getPayload();
+
+            return Long.parseLong(claims.getSubject());
+
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Invalid JWT token", e);
+        }
     }
 
     public String generateAccessToken(User user) {
@@ -25,9 +42,10 @@ public class JwtService {
                 .subject(user.getId().toString())
                 .claim("email", user.getEmail())
                 .issuedAt(new Date())
-                .expiration(new Date(System.currentTimeMillis() + 1000*60*100))
+                .expiration(
+                        new Date(System.currentTimeMillis() + 1000L * 60 * 100)
+                )
                 .signWith(getSecretKey())
                 .compact();
     }
-
 }

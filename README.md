@@ -87,7 +87,7 @@ All services register with the **Eureka Discovery Server**. The API Gateway reso
 Social connections are inherently graph data. The `CONNECTED_TO` and `REQUESTED_TO` Cypher relationships make first-degree traversal and request lifecycle management natural, without complex JOIN tables.
 
 **JWT propagated through the Gateway**
-The API Gateway validates the JWT on protected routes and forwards the `userId` in a request header. Downstream services read the user identity from the header context (`AuthContextHolder`) rather than re-validating the token — keeping auth logic in one place.
+The API Gateway validates the JWT on protected routes and forwards the `userId` in an `X-User-Id` request header via the `AuthenticationFilter`. Downstream services read the user identity from this header using a `UserContextInterceptor` that stores it in a thread‑local `ContextHolder`. All outbound Feign calls automatically copy the `X-User-Id` header via a Feign `RequestInterceptor`, so the user context is preserved across the mesh.
 
 **Kafka for cross-service notifications**
 When a post is created, the Posts Service fetches first-degree connections via Feign and publishes a `PostCreated` event to Kafka for each connection. The Notification Service consumes these events independently, ensuring loose coupling and eventual consistency.

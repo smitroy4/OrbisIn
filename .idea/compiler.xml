@@ -9,7 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="discoveryServer" />
       </profile>
-      <profile name="Annotation profile for userService" enabled="true">
+      <profile name="Annotation profile for apiGateway" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -18,8 +18,8 @@
         </processorPath>
         <module name="apiGateway" />
         <module name="connectionsService" />
-        <module name="userService" />
         <module name="postsService" />
+        <module name="userService" />
       </profile>
     </annotationProcessing>
   </component>
