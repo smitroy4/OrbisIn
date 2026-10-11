@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5954344-e304-4b4e-894a-c0dfbb3f2413" name="Changes" comment="Add user context management and event publishing for user and connection actions; Uploader service conflicting">
-      <change beforePath="$PROJECT_DIR$/uploaderService/src/main/java/com/smit/orbisIn/uploaderService/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uploaderService/src/main/java/com/smit/orbisIn/uploaderService/exception/GlobalExceptionHandler.java" afterDir="false" />
-    </list>
+    <list default="true" id="b5954344-e304-4b4e-894a-c0dfbb3f2413" name="Changes" comment="Refactor Feed component and enhance global exception handling; update port configuration" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791744402038</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactor Feed component and enhance global exception handling; update port configuration">
+      <option name="closed" value="true" />
+      <created>1791745318057</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1791745318057</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +146,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add user context management and event publishing for user and connection actions; Uploader service conflicting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add user context management and event publishing for user and connection actions; Uploader service conflicting" />
+    <MESSAGE value="Refactor Feed component and enhance global exception handling; update port configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor Feed component and enhance global exception handling; update port configuration" />
   </component>
 </project>
