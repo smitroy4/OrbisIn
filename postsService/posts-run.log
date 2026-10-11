@@ -1,0 +1,367 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202026.1.3/plugins/maven/lib/maven3/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.smit.orbisIn:postsService >--------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.8:run (default-cli) > test-compile @ postsService >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ postsService ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ postsService ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ postsService ---
+[INFO] skip non existing resourceDirectory H:\Projects\Java Projects\Microservices Projects\OrbisIn\postsService\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ postsService ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.0.8:run (default-cli) < test-compile @ postsService <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.8:run (default-cli) @ postsService ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.8)
+
+2026-10-11T23:54:54.224+05:30  INFO 7132 --- [posts-Service] [           main] c.s.o.p.PostsServiceApplication          : Starting PostsServiceApplication using Java 25 with PID 7132 (H:\Projects\Java Projects\Microservices Projects\OrbisIn\postsService\target\classes started by SMIT in H:\Projects\Java Projects\Microservices Projects\OrbisIn\postsService)
+2026-10-11T23:54:54.228+05:30  INFO 7132 --- [posts-Service] [           main] c.s.o.p.PostsServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-10-11T23:54:55.895+05:30  INFO 7132 --- [posts-Service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-11T23:54:56.192+05:30  INFO 7132 --- [posts-Service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 279 ms. Found 3 JPA repository interfaces.
+2026-10-11T23:54:56.723+05:30  INFO 7132 --- [posts-Service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0aecc9f4-9079-3abc-a617-e8e031d395ad
+2026-10-11T23:54:57.331+05:30  INFO 7132 --- [posts-Service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9010 (http)
+2026-10-11T23:54:57.365+05:30  INFO 7132 --- [posts-Service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-11T23:54:57.366+05:30  INFO 7132 --- [posts-Service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-11T23:54:57.474+05:30  INFO 7132 --- [posts-Service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3171 ms
+2026-10-11T23:54:57.942+05:30  INFO 7132 --- [posts-Service] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-11T23:54:58.039+05:30  INFO 7132 --- [posts-Service] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.24.Final
+2026-10-11T23:54:58.727+05:30  INFO 7132 --- [posts-Service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-11T23:54:58.777+05:30  INFO 7132 --- [posts-Service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-11T23:54:59.927+05:30  INFO 7132 --- [posts-Service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6fafbdac
+2026-10-11T23:54:59.930+05:30  INFO 7132 --- [posts-Service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-11T23:55:00.485+05:30  INFO 7132 --- [posts-Service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://ep-lively-bread-b38n02bm-pooler.c-4.ap-southeast-1.aws.neon.tech:5432/orbisin-post-db?sslmode=require]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: orbisin-post-db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-11T23:55:01.839+05:30  INFO 7132 --- [posts-Service] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    alter table if exists post 
+       add column image_url varchar(255)
+2026-10-11T23:55:02.308+05:30  INFO 7132 --- [posts-Service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-11T23:55:02.453+05:30  INFO 7132 --- [posts-Service] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldOffset has been called by org.modelmapper.internal.typetools.TypeResolver (file:/C:/Users/SMIT/.m2/repository/org/modelmapper/modelmapper/3.2.6/modelmapper-3.2.6.jar)
+WARNING: Please consider reporting this to the maintainers of class org.modelmapper.internal.typetools.TypeResolver
+WARNING: sun.misc.Unsafe::staticFieldOffset will be removed in a future release
+2026-10-11T23:55:02.927+05:30  WARN 7132 --- [posts-Service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-11T23:55:03.887+05:30  INFO 7132 --- [posts-Service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-10-11T23:55:03.952+05:30  WARN 7132 --- [posts-Service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-11T23:55:03.999+05:30  INFO 7132 --- [posts-Service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-11T23:55:04.127+05:30  INFO 7132 --- [posts-Service] [           main] o.a.kafka.common.config.AbstractConfig   : AdminClientConfig values: 
+	bootstrap.controllers = []
+	bootstrap.servers = [orbisin-notification-service-smitroy4.h.aivencloud.com:16752]
+	client.dns.lookup = use_all_dns_ips
+	client.id = posts-Service-admin-0
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = false
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = SCRAM-SHA-256
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = H:/Projects/Java Projects/Microservices Projects/OrbisIn/postsService/kafka-truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+
+2026-10-11T23:55:04.366+05:30  INFO 7132 --- [posts-Service] [           main] o.a.k.c.s.authenticator.AbstractLogin    : Successfully logged in.
+2026-10-11T23:55:04.457+05:30  INFO 7132 --- [posts-Service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-10-11T23:55:04.457+05:30  INFO 7132 --- [posts-Service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-10-11T23:55:04.457+05:30  INFO 7132 --- [posts-Service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1791743104455
+2026-10-11T23:55:10.607+05:30  INFO 7132 --- [posts-Service] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-10-11T23:55:10.607+05:30  INFO 7132 --- [posts-Service] [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-10-11T23:55:10.607+05:30  INFO 7132 --- [posts-Service] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-10-11T23:55:10.608+05:30  INFO 7132 --- [posts-Service] [Service-admin-0] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for posts-Service-admin-0 unregistered
+2026-10-11T23:55:10.621+05:30  INFO 7132 --- [posts-Service] [Service-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-10-11T23:55:10.621+05:30  INFO 7132 --- [posts-Service] [Service-admin-0] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-10-11T23:55:10.622+05:30  INFO 7132 --- [posts-Service] [Service-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-10-11T23:55:10.645+05:30  INFO 7132 --- [posts-Service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-10-11T23:55:10.678+05:30  INFO 7132 --- [posts-Service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-10-11T23:55:10.692+05:30  INFO 7132 --- [posts-Service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-11T23:55:10.705+05:30  INFO 7132 --- [posts-Service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-10-11T23:55:10.705+05:30  INFO 7132 --- [posts-Service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-10-11T23:55:10.705+05:30  INFO 7132 --- [posts-Service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-10-11T23:55:10.705+05:30  INFO 7132 --- [posts-Service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-10-11T23:55:10.705+05:30  INFO 7132 --- [posts-Service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-10-11T23:55:10.706+05:30  INFO 7132 --- [posts-Service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-10-11T23:55:10.706+05:30  INFO 7132 --- [posts-Service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-10-11T23:55:11.110+05:30  INFO 7132 --- [posts-Service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-10-11T23:55:11.113+05:30  INFO 7132 --- [posts-Service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-10-11T23:55:11.115+05:30  INFO 7132 --- [posts-Service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-11T23:55:11.118+05:30  INFO 7132 --- [posts-Service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1791743111116 with initial instances count: 7
+2026-10-11T23:55:11.124+05:30  INFO 7132 --- [posts-Service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application POSTS-SERVICE with eureka with status UP
+2026-10-11T23:55:11.124+05:30  INFO 7132 --- [posts-Service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1791743111124, current=UP, previous=STARTING]
+2026-10-11T23:55:11.126+05:30  INFO 7132 --- [posts-Service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS-SERVICE/smit.mshome.net:posts-Service:9010: registering service...
+2026-10-11T23:55:11.140+05:30  INFO 7132 --- [posts-Service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9010 (http) with context path '/posts'
+2026-10-11T23:55:11.141+05:30  INFO 7132 --- [posts-Service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9010
+2026-10-11T23:55:11.169+05:30  INFO 7132 --- [posts-Service] [           main] c.s.o.p.PostsServiceApplication          : Started PostsServiceApplication in 17.55 seconds (process running for 18.455)
+2026-10-11T23:55:11.195+05:30  INFO 7132 --- [posts-Service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS-SERVICE/smit.mshome.net:posts-Service:9010 - registration status: 204
+2026-10-11T23:55:41.188+05:30  INFO 7132 --- [posts-Service] [nio-9010-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/posts]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-11T23:55:41.189+05:30  INFO 7132 --- [posts-Service] [nio-9010-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-11T23:55:41.192+05:30  INFO 7132 --- [posts-Service] [nio-9010-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-11T23:55:41.241+05:30  INFO 7132 --- [posts-Service] [nio-9010-exec-1] c.s.o.postsService.service.PostService   : Getting all the posts of a user with ID: 6
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.content,
+        p1_0.created_at,
+        p1_0.image_url,
+        p1_0.user_id 
+    from
+        post p1_0 
+    where
+        p1_0.user_id=?
+2026-10-11T23:55:45.959+05:30  INFO 7132 --- [posts-Service] [nio-9010-exec-3] c.s.o.postsService.service.PostService   : Creating post for user with id: 6
+Hibernate: 
+    insert 
+    into
+        post
+        (content, created_at, image_url, user_id) 
+    values
+        (?, ?, ?, ?)
+2026-10-11T23:55:46.239+05:30  INFO 7132 --- [posts-Service] [nio-9010-exec-3] o.a.kafka.common.config.AbstractConfig   : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [orbisin-notification-service-smitroy4.h.aivencloud.com:16752]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = posts-Service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = SCRAM-SHA-256
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = H:/Projects/Java Projects/Microservices Projects/OrbisIn/postsService/kafka-truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transaction.two.phase.commit.enable = false
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2026-10-11T23:55:46.282+05:30  INFO 7132 --- [posts-Service] [nio-9010-exec-3] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-10-11T23:55:46.303+05:30  INFO 7132 --- [posts-Service] [nio-9010-exec-3] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=posts-Service-producer-1] Instantiated an idempotent producer.
+2026-10-11T23:55:46.321+05:30  INFO 7132 --- [posts-Service] [nio-9010-exec-3] o.a.k.c.s.authenticator.AbstractLogin    : Successfully logged in.
+2026-10-11T23:55:46.335+05:30  INFO 7132 --- [posts-Service] [nio-9010-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-10-11T23:55:46.335+05:30  INFO 7132 --- [posts-Service] [nio-9010-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-10-11T23:55:46.335+05:30  INFO 7132 --- [posts-Service] [nio-9010-exec-3] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1791743146335
+2026-10-11T23:55:46.737+05:30  INFO 7132 --- [posts-Service] [vice-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=posts-Service-producer-1] Cluster ID: d4145513-8192-5f4a-dafa-64f19c3c455f
+2026-10-11T23:55:46.738+05:30  INFO 7132 --- [posts-Service] [vice-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=posts-Service-producer-1] ProducerId set to 1006 with epoch 0
+2026-10-11T23:55:46.758+05:30  INFO 7132 --- [posts-Service] [nio-9010-exec-3] c.s.o.p.producer.PostEventProducer       : Published PostCreatedEvent for postId: 7
+2026-10-11T23:55:46.853+05:30  INFO 7132 --- [posts-Service] [nio-9010-exec-4] c.s.o.postsService.service.PostService   : Getting the post with ID: 7
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.content,
+        p1_0.created_at,
+        p1_0.image_url,
+        p1_0.user_id 
+    from
+        post p1_0 
+    where
+        p1_0.id=?
+2026-10-11T23:56:41.140+05:30  INFO 7132 --- [posts-Service] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS-SERVICE/smit.mshome.net:posts-Service:9010 - Re-registering apps/POSTS-SERVICE
+2026-10-11T23:56:41.140+05:30  INFO 7132 --- [posts-Service] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS-SERVICE/smit.mshome.net:posts-Service:9010: registering service...
+2026-10-11T23:56:41.144+05:30  INFO 7132 --- [posts-Service] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS-SERVICE/smit.mshome.net:posts-Service:9010 - registration status: 204

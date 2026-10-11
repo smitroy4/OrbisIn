@@ -1,0 +1,104 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.smit.orbisIn:uploaderService >------------------
+[INFO] Building uploaderService 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.8:run (default-cli) > test-compile @ uploaderService >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ uploaderService ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ uploaderService ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ uploaderService ---
+[INFO] skip non existing resourceDirectory H:\Projects\Java Projects\Microservices Projects\OrbisIn\uploaderService\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ uploaderService ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.0.8:run (default-cli) < test-compile @ uploaderService <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.8:run (default-cli) @ uploaderService ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.8)
+
+2026-10-11T23:57:49.023+05:30  INFO 9420 --- [uploaderService] [           main] c.s.o.u.UploaderServiceApplication       : Starting UploaderServiceApplication using Java 25 with PID 9420 (H:\Projects\Java Projects\Microservices Projects\OrbisIn\uploaderService\target\classes started by SMIT in H:\Projects\Java Projects\Microservices Projects\OrbisIn\uploaderService)
+2026-10-11T23:57:49.028+05:30  INFO 9420 --- [uploaderService] [           main] c.s.o.u.UploaderServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-10-11T23:57:51.696+05:30  INFO 9420 --- [uploaderService] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24a3dcbf-4dde-381a-aca2-ce405a93dc59
+2026-10-11T23:57:52.392+05:30  INFO 9420 --- [uploaderService] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9060 (http)
+2026-10-11T23:57:52.412+05:30  INFO 9420 --- [uploaderService] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-11T23:57:52.413+05:30  INFO 9420 --- [uploaderService] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-11T23:57:52.552+05:30  INFO 9420 --- [uploaderService] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3279 ms
+2026-10-11T23:57:56.182+05:30  INFO 9420 --- [uploaderService] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-10-11T23:57:56.247+05:30  WARN 9420 --- [uploaderService] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-11T23:57:56.265+05:30  INFO 9420 --- [uploaderService] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-11T23:57:56.393+05:30  INFO 9420 --- [uploaderService] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-10-11T23:57:56.428+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-10-11T23:57:56.435+05:30  INFO 9420 --- [uploaderService] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-11T23:57:56.449+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-10-11T23:57:56.449+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-10-11T23:57:56.450+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-10-11T23:57:56.451+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-10-11T23:57:56.452+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-10-11T23:57:56.453+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-10-11T23:57:56.454+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-10-11T23:57:56.981+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-10-11T23:57:56.984+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-10-11T23:57:56.988+05:30  INFO 9420 --- [uploaderService] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-11T23:57:56.990+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1791743276989 with initial instances count: 7
+2026-10-11T23:57:56.997+05:30  INFO 9420 --- [uploaderService] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UPLOADERSERVICE with eureka with status UP
+2026-10-11T23:57:57.000+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1791743277000, current=UP, previous=STARTING]
+2026-10-11T23:57:57.004+05:30  INFO 9420 --- [uploaderService] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOADERSERVICE/smit.mshome.net:uploaderService:9060: registering service...
+2026-10-11T23:57:57.012+05:30  INFO 9420 --- [uploaderService] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UPLOADERSERVICE with eureka with status DOWN
+2026-10-11T23:57:57.014+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1791743277014, current=DOWN, previous=UP]
+2026-10-11T23:57:57.016+05:30  WARN 9420 --- [uploaderService] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-10-11T23:57:57.025+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-10-11T23:57:57.055+05:30  INFO 9420 --- [uploaderService] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOADERSERVICE/smit.mshome.net:uploaderService:9060 - registration status: 204
+2026-10-11T23:57:57.056+05:30  INFO 9420 --- [uploaderService] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOADERSERVICE/smit.mshome.net:uploaderService:9060: registering service...
+2026-10-11T23:57:57.062+05:30  INFO 9420 --- [uploaderService] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOADERSERVICE/smit.mshome.net:uploaderService:9060 - registration status: 204
+2026-10-11T23:57:57.064+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-10-11T23:57:57.070+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOADERSERVICE/smit.mshome.net:uploaderService:9060 - deregister  status: 200
+2026-10-11T23:57:57.071+05:30  INFO 9420 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-10-11T23:57:57.091+05:30  INFO 9420 --- [uploaderService] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-11T23:57:57.109+05:30 ERROR 9420 --- [uploaderService] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9060 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9060 or configure this application to listen on another port.
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.735 s
+[INFO] Finished at: 2026-10-11T23:57:57+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:4.0.8:run (default-cli) on project uploaderService: Process terminated with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

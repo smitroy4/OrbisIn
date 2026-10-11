@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b5954344-e304-4b4e-894a-c0dfbb3f2413" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apiGateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apiGateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apiGateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connectionsService/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/connectionsService/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connectionsService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/connectionsService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connectionsService/src/main/java/com/smit/orbisIn/connectionsService/controller/ConnectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/connectionsService/src/main/java/com/smit/orbisIn/connectionsService/controller/ConnectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connectionsService/src/main/java/com/smit/orbisIn/connectionsService/repository/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/connectionsService/src/main/java/com/smit/orbisIn/connectionsService/repository/PersonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connectionsService/src/main/java/com/smit/orbisIn/connectionsService/service/ConnectionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/connectionsService/src/main/java/com/smit/orbisIn/connectionsService/service/ConnectionsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connectionsService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/connectionsService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discoveryServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discoveryServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postsService/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postsService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/PostsServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/PostsServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/dto/PostCreateRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/dto/PostCreateRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/dto/PostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/dto/PostDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/entity/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/service/PostLikeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/service/PostLikeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postsService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/userService/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/userService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/smit/orbisIn/userService/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/java/com/smit/orbisIn/userService/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "smitroy4"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/smitroy4/OrbisIn.git",
+    "accountId": "86575633-e22a-4a73-a61a-ca6b9d7ad435"
+  }
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="3KYbvlBtzUVkj2ub2qb8zOqcYI9" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.ConnectionsServiceApplication.executor": "Run",
+    "Spring Boot.DiscoveryServerApplication.executor": "Run",
+    "Spring Boot.NotificationServiceApplication.executor": "Run",
+    "Spring Boot.PostsServiceApplication.executor": "Run",
+    "Spring Boot.UploaderServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "settings.sync"
+  }
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+        <option value="js.build_tools.npm" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="ApiGatewayApplication" value="STOPPED" />
+              <entry key="ConnectionsServiceApplication" value="STOPPED" />
+              <entry key="DiscoveryServerApplication" value="STOPPED" />
+              <entry key="NotificationServiceApplication" value="STOPPED" />
+              <entry key="PostsServiceApplication" value="FAILED" />
+              <entry key="UploaderServiceApplication" value="FAILED" />
+              <entry key="UserServiceApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.ReactFrontend">
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.ReactFrontend" />
+        <item itemvalue="Spring Boot.ApiGatewayApplication" />
+        <item itemvalue="Spring Boot.ConnectionsServiceApplication" />
+        <item itemvalue="Spring Boot.UploaderServiceApplication" />
+        <item itemvalue="Spring Boot.NotificationServiceApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b5954344-e304-4b4e-894a-c0dfbb3f2413" name="Changes" comment="" />
+      <created>1791737684651</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1791737684651</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,84 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::staticFieldBase has been called by com.google.inject.internal.aop.HiddenClassDefiner (file:/C:/Program%20Files/JetBrains/IntelliJ%20IDEA%202026.1.3/plugins/maven/lib/maven3/lib/guice-5.1.0-classes.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.inject.internal.aop.HiddenClassDefiner
+WARNING: sun.misc.Unsafe::staticFieldBase will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.smit.orbisIn:uploaderService >------------------
+[INFO] Building uploaderService 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.8:run (default-cli) > test-compile @ uploaderService >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ uploaderService ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ uploaderService ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ uploaderService ---
+[INFO] skip non existing resourceDirectory H:\Projects\Java Projects\Microservices Projects\OrbisIn\uploaderService\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ uploaderService ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.0.8:run (default-cli) < test-compile @ uploaderService <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.8:run (default-cli) @ uploaderService ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.8)
+
+2026-10-11T23:43:58.103+05:30  INFO 14908 --- [uploaderService] [           main] c.s.o.u.UploaderServiceApplication       : Starting UploaderServiceApplication using Java 25 with PID 14908 (H:\Projects\Java Projects\Microservices Projects\OrbisIn\uploaderService\target\classes started by SMIT in H:\Projects\Java Projects\Microservices Projects\OrbisIn\uploaderService)
+2026-10-11T23:43:58.107+05:30  INFO 14908 --- [uploaderService] [           main] c.s.o.u.UploaderServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-10-11T23:43:59.460+05:30  INFO 14908 --- [uploaderService] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=24a3dcbf-4dde-381a-aca2-ce405a93dc59
+2026-10-11T23:43:59.920+05:30  INFO 14908 --- [uploaderService] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9050 (http)
+2026-10-11T23:43:59.940+05:30  INFO 14908 --- [uploaderService] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-11T23:43:59.941+05:30  INFO 14908 --- [uploaderService] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-11T23:44:00.050+05:30  INFO 14908 --- [uploaderService] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1868 ms
+2026-10-11T23:44:02.268+05:30  INFO 14908 --- [uploaderService] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-10-11T23:44:02.327+05:30  WARN 14908 --- [uploaderService] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-11T23:44:02.341+05:30  INFO 14908 --- [uploaderService] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-11T23:44:02.448+05:30  INFO 14908 --- [uploaderService] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-10-11T23:44:02.493+05:30  INFO 14908 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-10-11T23:44:02.498+05:30  INFO 14908 --- [uploaderService] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-11T23:44:02.514+05:30  INFO 14908 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-10-11T23:44:02.515+05:30  INFO 14908 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-10-11T23:44:02.515+05:30  INFO 14908 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-10-11T23:44:02.515+05:30  INFO 14908 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-10-11T23:44:02.515+05:30  INFO 14908 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-10-11T23:44:02.515+05:30  INFO 14908 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-10-11T23:44:02.516+05:30  INFO 14908 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-10-11T23:44:03.354+05:30  INFO 14908 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-10-11T23:44:03.358+05:30  INFO 14908 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-10-11T23:44:03.364+05:30  INFO 14908 --- [uploaderService] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-11T23:44:03.367+05:30  INFO 14908 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1791742443366 with initial instances count: 5
+2026-10-11T23:44:03.376+05:30  INFO 14908 --- [uploaderService] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UPLOADERSERVICE with eureka with status UP
+2026-10-11T23:44:03.378+05:30  INFO 14908 --- [uploaderService] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1791742443378, current=UP, previous=STARTING]
+2026-10-11T23:44:03.388+05:30  INFO 14908 --- [uploaderService] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOADERSERVICE/smit.mshome.net:uploaderService:9050: registering service...
+2026-10-11T23:44:03.448+05:30  INFO 14908 --- [uploaderService] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9050 (http) with context path '/uploads'
+2026-10-11T23:44:03.449+05:30  INFO 14908 --- [uploaderService] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9050
+2026-10-11T23:44:03.466+05:30  INFO 14908 --- [uploaderService] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOADERSERVICE/smit.mshome.net:uploaderService:9050 - registration status: 204
+2026-10-11T23:44:03.475+05:30  INFO 14908 --- [uploaderService] [           main] c.s.o.u.UploaderServiceApplication       : Started UploaderServiceApplication in 5.941 seconds (process running for 6.779)
+2026-10-11T23:44:42.307+05:30  INFO 14908 --- [uploaderService] [nio-9050-exec-1] o.a.c.c.C.[.[localhost].[/uploads]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-11T23:44:42.307+05:30  INFO 14908 --- [uploaderService] [nio-9050-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-11T23:44:42.309+05:30  INFO 14908 --- [uploaderService] [nio-9050-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-11T23:44:42.645+05:30  WARN 14908 --- [uploaderService] [nio-9050-exec-1] s.a.a.h.a.internal.utils.ApacheUtils     : NoSuchMethodException was thrown when disabling normalizeUri. This indicates you are using an old version (< 4.5.8) of Apache http client. It is recommended to use http client version >= 4.5.9 to avoid the breaking change introduced in apache client 4.5.7 and the latency in exception handling. See https://github.com/aws/aws-sdk-java/issues/1919 for more information
+2026-10-11T23:45:03.389+05:30  INFO 14908 --- [uploaderService] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOADERSERVICE/smit.mshome.net:uploaderService:9050 - Re-registering apps/UPLOADERSERVICE
+2026-10-11T23:45:03.389+05:30  INFO 14908 --- [uploaderService] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOADERSERVICE/smit.mshome.net:uploaderService:9050: registering service...
+2026-10-11T23:45:03.396+05:30  INFO 14908 --- [uploaderService] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOADERSERVICE/smit.mshome.net:uploaderService:9050 - registration status: 204
+2026-10-11T23:46:33.424+05:30  INFO 14908 --- [uploaderService] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOADERSERVICE/smit.mshome.net:uploaderService:9050 - Re-registering apps/UPLOADERSERVICE
+2026-10-11T23:46:33.424+05:30  INFO 14908 --- [uploaderService] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOADERSERVICE/smit.mshome.net:uploaderService:9050: registering service...
+2026-10-11T23:46:33.428+05:30  INFO 14908 --- [uploaderService] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOADERSERVICE/smit.mshome.net:uploaderService:9050 - registration status: 204
+2026-10-11T23:49:02.519+05:30  INFO 14908 --- [uploaderService] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-10-11T23:54:02.563+05:30  INFO 14908 --- [uploaderService] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

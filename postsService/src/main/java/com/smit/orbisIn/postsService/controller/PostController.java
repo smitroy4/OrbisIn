@@ -1,5 +1,6 @@
 package com.smit.orbisIn.postsService.controller;
 
+import com.smit.orbisIn.postsService.context.ContextHolder;
 import com.smit.orbisIn.postsService.dto.PostCreateRequestDto;
 import com.smit.orbisIn.postsService.dto.PostDto;
 import com.smit.orbisIn.postsService.service.PostService;
@@ -8,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -21,7 +23,11 @@ public class PostController {
     @PostMapping
     public ResponseEntity<PostDto> createPost(@RequestBody PostCreateRequestDto postCreateRequestDto,
                                               HttpServletRequest httpServletRequest) {
-        PostDto postDto = postService.createPost(postCreateRequestDto, 1L);
+        Long userId = ContextHolder.getUserId();
+        if (userId == null) {
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Missing or invalid user context");
+        }
+        PostDto postDto = postService.createPost(postCreateRequestDto, userId);
         return new ResponseEntity<>(postDto, HttpStatus.CREATED);
     }
 

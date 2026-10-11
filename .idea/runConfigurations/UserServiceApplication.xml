@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+    <module name="userService" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.smit.orbisIn.userService.UserServiceApplication" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.smit.orbisIn.userService.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

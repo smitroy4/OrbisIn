@@ -10,26 +10,49 @@ spring:
   application.name: api-gateway
   cloud:
     gateway:
-      routes:
-        - id: user-service
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path=/api/v1/users/**
-          filters:
-            - StripPrefix=2
+      server:
+        webflux:
+          globalcors:
+            cors-configurations:
+              '[/**]':
+                allowed-origins: "http://localhost:5173"
+                allowed-methods: "*"
+                allowed-headers: "*"
+          routes:
+            - id: user-service
+              uri: lb://USER-SERVICE
+              predicates:
+                - Path=/api/v1/users/**
+              filters:
+                - StripPrefix=2
 
-        - id: posts-service
-          uri: lb://POSTS-SERVICE
-          predicates:
-            - Path=/api/v1/posts/**
-          filters:
-            - StripPrefix=2
+            - id: posts-service
+              uri: lb://POSTS-SERVICE
+              predicates:
+                - Path=/api/v1/posts/**
+              filters:
+                - StripPrefix=2
 
-        - id: connections-service
-          uri: lb://CONNECTIONS-SERVICE
-          predicates:
-            - Path=/api/v1/connections/**
-          filters:
-            - StripPrefix=2
+            - id: connections-service
+              uri: lb://CONNECTIONS-SERVICE
+              predicates:
+                - Path=/api/v1/connections/**
+              filters:
+                - StripPrefix=2
+
+            - id: notification-service
+              uri: lb://NOTIFICATIONSERVICE
+              predicates:
+                - Path=/api/v1/notifications/**
+              filters:
+                - StripPrefix=2
+
+            - id: uploader-service
+              uri: lb://UPLOADERSERVICE
+              predicates:
+                - Path=/api/v1/uploads/**
+              filters:
+                - StripPrefix=2
 jwt:
-  secretKey: ${JWT_SECRET_KEY}
+  # Must match userService jwt.secretKey. Override with JWT_SECRET_KEY env var.
+  secretKey: ${JWT_SECRET_KEY:asdfuasjf9a8s7fd89ihq34kljruyf98ayshcskdhfioafsuyfdcjha890sduf}

@@ -37,6 +37,7 @@
     <properties>
 
         <java.version>21</java.version>
+		<dockerhub.username>your-dockerhub-username</dockerhub.username>
 
         <spring-cloud.version>2025.1.3</spring-cloud.version>
 
@@ -243,7 +244,26 @@
 
             </plugin>
 
-        </plugins>
+        <plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.4.5</version>
+				<configuration>
+					<from>
+						<image>eclipse-temurin:21-jre</image>
+					</from>
+					<to>
+						<image>docker.io/${dockerhub.username}/orbisin-api-gateway:latest</image>
+					</to>
+					<container>
+						<ports>
+							<port>8080</port>
+						</ports>
+						<creationTime>USE_CURRENT_TIMESTAMP</creationTime>
+					</container>
+				</configuration>
+			</plugin>
+		</plugins>
 
     </build>
 

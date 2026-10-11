@@ -1,0 +1,369 @@
+{
+  "info": {
+    "name": "OrbisIn - Microservices API",
+    "description": "Full API collection for OrbisIn microservices. Run through API Gateway (port 8080) by default.\n\nSetup:\n1. Start discoveryServer (8761), then all services, then apiGateway (8080).\n2. Run `Auth > Signup` then `Auth > Login`. Copy the token from the login response body into the `jwt` collection variable (or rely on the auto-capture test script).\n3. All non-auth requests use `Authorization: Bearer {{jwt}}` via collection-level auth.\n\nGateway routing (StripPrefix=2):\n- /api/v1/users/** -> USER-SERVICE (controller base /auth)\n- /api/v1/posts/** -> POSTS-SERVICE (bases /core, /likes)\n- /api/v1/connections/** -> CONNECTIONS-SERVICE (base /core)\n- /api/v1/notifications/** -> NOTIFICATIONSERVICE (base /notifications)\n- /api/v1/uploads/** -> UPLOADERSERVICE (base /core)\n\nDirect service URLs (bypass gateway, for debugging): user :9020, posts :9010, connections :9030, notifications :9040, uploader :9050.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{jwt}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Default path params so requests run without edits.",
+          "if (!pm.collectionVariables.get('postId')) pm.collectionVariables.set('postId', '1');",
+          "if (!pm.collectionVariables.get('userId')) pm.collectionVariables.set('userId', '1');",
+          "if (!pm.collectionVariables.get('recipientId')) pm.collectionVariables.set('recipientId', '1');",
+          "if (!pm.collectionVariables.get('notificationId')) pm.collectionVariables.set('notificationId', 'REPLACE_WITH_MONGO_ID');",
+          "if (!pm.collectionVariables.get('s3Key')) pm.collectionVariables.set('s3Key', 'uploads/sample.txt');",
+          "if (!pm.collectionVariables.get('filename')) pm.collectionVariables.set('filename', 'sample.txt');"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080", "description": "API Gateway base URL" },
+    { "key": "jwt", "value": "", "description": "JWT from POST /api/v1/users/auth/login (auto-captured by test script)" },
+    { "key": "userId", "value": "1" },
+    { "key": "postId", "value": "1" },
+    { "key": "recipientId", "value": "1" },
+    { "key": "notificationId", "value": "REPLACE_WITH_MONGO_ID" },
+    { "key": "requestId", "value": "REPLACE_WITH_REQUEST_ID" },
+    { "key": "commentId", "value": "REPLACE_WITH_COMMENT_ID" },
+    { "key": "s3Key", "value": "uploads/sample.txt" },
+    { "key": "filename", "value": "sample.txt" },
+    { "key": "userServiceDirect", "value": "http://localhost:9020" },
+    { "key": "postsServiceDirect", "value": "http://localhost:9010" },
+    { "key": "connectionsServiceDirect", "value": "http://localhost:9030" },
+    { "key": "notificationServiceDirect", "value": "http://localhost:9040" },
+    { "key": "uploaderServiceDirect", "value": "http://localhost:9050" }
+  ],
+  "item": [
+    {
+      "name": "01 - Auth (User Service)",
+      "description": "Public endpoints. Gateway: /api/v1/users/** -> USER-SERVICE (/auth). Direct: {{userServiceDirect}}/auth",
+      "item": [
+        {
+          "name": "Signup",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/users/auth/signup", "host": ["{{baseUrl}}"], "path": ["api", "v1", "users", "auth", "signup"] },
+            "description": "Public. Body: { name, email, password }. Returns 201 + UserDto. Direct: {{userServiceDirect}}/auth/signup",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test User\",\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\"\n}",
+              "options": { "raw": { "language": "json" } }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/users/auth/login", "host": ["{{baseUrl}}"], "path": ["api", "v1", "users", "auth", "login"] },
+            "description": "Public. Body: { email, password }. Returns 200 with JWT as plain-text body. Token is auto-saved to {{jwt}}. Direct: {{userServiceDirect}}/auth/login",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\"\n}",
+              "options": { "raw": { "language": "json" } }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var token = pm.response.text().trim();",
+                  "if (token && pm.response.code === 200) {",
+                  "    pm.collectionVariables.set('jwt', token);",
+                  "    console.log('JWT saved to collection variable.');",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "02 - Posts",
+      "description": "Gateway: /api/v1/posts/** -> POSTS-SERVICE (/core, /likes). Direct: {{postsServiceDirect}}. Requires Bearer JWT.",
+      "item": [
+        {
+          "name": "Create Post",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/posts/core", "host": ["{{baseUrl}}"], "path": ["api", "v1", "posts", "core"] },
+            "description": "POST /core. Body: { content }. Returns 201 + PostDto { id, userId, content, createdAt }. Direct: {{postsServiceDirect}}/core",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"content\": \"Hello OrbisIn! My first post.\",\n  \"imageUrl\": null\n}",
+              "options": { "raw": { "language": "json" } }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (pm.response.code === 201) {",
+                  "    try { var b = pm.response.json(); if (b.id) pm.collectionVariables.set('postId', String(b.id)); } catch (e) {}",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "response": []
+        },
+        {
+          "name": "Get Post By ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/v1/posts/core/{{postId}}", "host": ["{{baseUrl}}"], "path": ["api", "v1", "posts", "core", "{{postId}}"] },
+            "description": "GET /core/{postId}. Direct: {{postsServiceDirect}}/core/{{postId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Posts Of User",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/v1/posts/core/users/{{userId}}/allPosts", "host": ["{{baseUrl}}"], "path": ["api", "v1", "posts", "core", "users", "{{userId}}", "allPosts"] },
+            "description": "GET /core/users/{userId}/allPosts. Direct: {{postsServiceDirect}}/core/users/{{userId}}/allPosts"
+          },
+          "response": []
+        },
+        {
+          "name": "Like Post",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/api/v1/posts/likes/{{postId}}", "host": ["{{baseUrl}}"], "path": ["api", "v1", "posts", "likes", "{{postId}}"] },
+            "description": "POST /likes/{postId}. No body. Returns 204. Acting user from X-User-Id (gateway JWT). Direct: {{postsServiceDirect}}/likes/{{postId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Unlike Post",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{baseUrl}}/api/v1/posts/likes/{{postId}}", "host": ["{{baseUrl}}"], "path": ["api", "v1", "posts", "likes", "{{postId}}"] },
+            "description": "DELETE /likes/{postId}. No body. Returns 204. Direct: {{postsServiceDirect}}/likes/{{postId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Add Comment",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "{{baseUrl}}/api/v1/posts/core/{{postId}}/comments", "host": ["{{baseUrl}}"], "path": ["api", "v1", "posts", "core", "{{postId}}", "comments"] },
+            "description": "POST /core/{postId}/comments. Body: { content }. Returns 201 + CommentDto. Direct: {{postsServiceDirect}}/core/{{postId}}/comments",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"content\": \"Great post!\"\n}",
+              "options": { "raw": { "language": "json" } }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Comments",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/v1/posts/core/{{postId}}/comments", "host": ["{{baseUrl}}"], "path": ["api", "v1", "posts", "core", "{{postId}}", "comments"] },
+            "description": "GET /core/{postId}/comments. Returns List<CommentDto> oldest first. Direct: {{postsServiceDirect}}/core/{{postId}}/comments"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Comment",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{baseUrl}}/api/v1/posts/core/comments/{{commentId}}", "host": ["{{baseUrl}}"], "path": ["api", "v1", "posts", "core", "comments", "{{commentId}}"] },
+            "description": "DELETE /core/comments/{commentId}. Only the author can delete (403 otherwise). Returns 204. Set {{commentId}} from Get Comments. Direct: {{postsServiceDirect}}/core/comments/{{commentId}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "03 - Connections",
+      "description": "Gateway: /api/v1/connections/** -> CONNECTIONS-SERVICE (/core). Direct: {{connectionsServiceDirect}}/connections (context-path). Requires Bearer JWT.",
+      "item": [
+        {
+          "name": "Get First-Degree Connections",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/v1/connections/core/{{userId}}/first-degree", "host": ["{{baseUrl}}"], "path": ["api", "v1", "connections", "core", "{{userId}}", "first-degree"] },
+            "description": "GET /core/{userId}/first-degree. Returns List<Person> (Neo4j). Direct: {{connectionsServiceDirect}}/connections/core/{{userId}}/first-degree"
+          },
+          "response": []
+        },
+        {
+          "name": "Discover People",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/v1/connections/core/discover?q=", "host": ["{{baseUrl}}"], "path": ["api", "v1", "connections", "core", "discover"], "query": [{ "key": "q", "value": "", "description": "Optional name filter; empty returns all suggestions" }] },
+            "description": "GET /core/discover?q=. People excluding self, connections, and pending requests (max 25). Direct: {{connectionsServiceDirect}}/connections/core/discover"
+          },
+          "response": []
+        },
+        {
+          "name": "Send Connection Request",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/api/v1/connections/core/requests/{{userId}}", "host": ["{{baseUrl}}"], "path": ["api", "v1", "connections", "core", "requests", "{{userId}}"] },
+            "description": "POST /core/requests/{receiverId}. Sender from JWT. Publishes REQUESTED event (receiver gets notification). Returns 201 + ConnectionRequestDto. Direct: {{connectionsServiceDirect}}/connections/core/requests/{{userId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Received Requests",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/v1/connections/core/requests/received", "host": ["{{baseUrl}}"], "path": ["api", "v1", "connections", "core", "requests", "received"] },
+            "description": "GET /core/requests/received. Pending requests for the logged-in user. Direct: {{connectionsServiceDirect}}/connections/core/requests/received"
+          },
+          "response": []
+        },
+        {
+          "name": "Sent Requests",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/v1/connections/core/requests/sent", "host": ["{{baseUrl}}"], "path": ["api", "v1", "connections", "core", "requests", "sent"] },
+            "description": "GET /core/requests/sent. Requests the logged-in user has sent. Direct: {{connectionsServiceDirect}}/connections/core/requests/sent"
+          },
+          "response": []
+        },
+        {
+          "name": "Accept Request",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/api/v1/connections/core/requests/{{requestId}}/accept", "host": ["{{baseUrl}}"], "path": ["api", "v1", "connections", "core", "requests", "{{requestId}}", "accept"] },
+            "description": "POST /core/requests/{requestId}/accept. Only the receiver. Creates CONNECTED_TO edge + publishes ACCEPTED event. Set {{requestId}} from Received Requests. Direct: {{connectionsServiceDirect}}/connections/core/requests/{{requestId}}/accept"
+          },
+          "response": []
+        },
+        {
+          "name": "Reject Request",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/api/v1/connections/core/requests/{{requestId}}/reject", "host": ["{{baseUrl}}"], "path": ["api", "v1", "connections", "core", "requests", "{{requestId}}", "reject"] },
+            "description": "POST /core/requests/{requestId}/reject. Only the receiver. Silent (no event). Direct: {{connectionsServiceDirect}}/connections/core/requests/{{requestId}}/reject"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "04 - Notifications",
+      "description": "Gateway: /api/v1/notifications/** -> NOTIFICATIONSERVICE (/notifications). Note double prefix after StripPrefix=2. Direct: {{notificationServiceDirect}}/notifications. Requires Bearer JWT.",
+      "item": [
+        {
+          "name": "Get Notifications By Recipient",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/v1/notifications/notifications/recipient/{{recipientId}}", "host": ["{{baseUrl}}"], "path": ["api", "v1", "notifications", "notifications", "recipient", "{{recipientId}}"] },
+            "description": "GET /notifications/recipient/{recipientId}. Returns List<Notification>. Direct: {{notificationServiceDirect}}/notifications/recipient/{{recipientId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Unread Count",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/v1/notifications/notifications/recipient/{{recipientId}}/unread-count", "host": ["{{baseUrl}}"], "path": ["api", "v1", "notifications", "notifications", "recipient", "{{recipientId}}", "unread-count"] },
+            "description": "GET /notifications/recipient/{recipientId}/unread-count. Returns { unreadCount }. Direct: {{notificationServiceDirect}}/notifications/recipient/{{recipientId}}/unread-count"
+          },
+          "response": []
+        },
+        {
+          "name": "Mark Notification As Read",
+          "request": {
+            "method": "PATCH",
+            "url": { "raw": "{{baseUrl}}/api/v1/notifications/notifications/{{notificationId}}/read", "host": ["{{baseUrl}}"], "path": ["api", "v1", "notifications", "notifications", "{{notificationId}}", "read"] },
+            "description": "PATCH /notifications/{id}/read (Mongo id, String). No body. Returns 200 + Notification or 404. Set {{notificationId}} from list response. Direct: {{notificationServiceDirect}}/notifications/{{notificationId}}/read"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "05 - Uploader (S3)",
+      "description": "Gateway: /api/v1/uploads/** -> UPLOADERSERVICE (/core). Direct: {{uploaderServiceDirect}}/uploads. Requires Bearer JWT.",
+      "item": [
+        {
+          "name": "Upload File (multipart)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": { "raw": "{{baseUrl}}/api/v1/uploads/core/upload?folder=uploads", "host": ["{{baseUrl}}"], "path": ["api", "v1", "uploads", "core", "upload"], "query": [{ "key": "folder", "value": "uploads", "description": "Optional, defaults to 'uploads'" }] },
+            "description": "POST /core/upload (multipart/form-data). Fields: file (required), folder (optional query, default 'uploads'). Returns 201 UploadResponse { key, url, bucket, contentType, size, uploadedAt }. In Postman/Bruno attach a real file to the 'file' field. Direct: {{uploaderServiceDirect}}/uploads/upload",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "file", "type": "file", "src": "", "description": "Attach a file to upload" }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Presign Upload URL",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/v1/uploads/core/presign-upload?filename={{filename}}&contentType=application/octet-stream&folder=uploads", "host": ["{{baseUrl}}"], "path": ["api", "v1", "uploads", "core", "presign-upload"], "query": [{ "key": "filename", "value": "{{filename}}", "description": "Required" }, { "key": "contentType", "value": "application/octet-stream", "description": "Optional, defaults to application/octet-stream" }, { "key": "folder", "value": "uploads", "description": "Optional, defaults to uploads" }] },
+            "description": "GET /core/presign-upload?filename=&contentType=&folder=. Returns { key, uploadUrl, fileUrl, expiresInSeconds }. Direct: {{uploaderServiceDirect}}/uploads/presign-upload"
+          },
+          "response": []
+        },
+        {
+          "name": "Presign Download URL",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/v1/uploads/core/presign-download?key={{s3Key}}", "host": ["{{baseUrl}}"], "path": ["api", "v1", "uploads", "core", "presign-download"], "query": [{ "key": "key", "value": "{{s3Key}}", "description": "Required S3 object key" }] },
+            "description": "GET /core/presign-download?key=. Returns { url }. Direct: {{uploaderServiceDirect}}/uploads/presign-download"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete File",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{baseUrl}}/api/v1/uploads/core?key={{s3Key}}", "host": ["{{baseUrl}}"], "path": ["api", "v1", "uploads", "core"], "query": [{ "key": "key", "value": "{{s3Key}}", "description": "Required S3 object key" }] },
+            "description": "DELETE /core?key=. Returns 204. Direct: {{uploaderServiceDirect}}/uploads?key={{s3Key}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Storage Health",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/v1/uploads/core/health/storage", "host": ["{{baseUrl}}"], "path": ["api", "v1", "uploads", "core", "health", "storage"] },
+            "description": "GET /core/health/storage. S3 health check. Direct: {{uploaderServiceDirect}}/uploads/health/storage"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

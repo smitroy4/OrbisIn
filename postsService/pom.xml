@@ -28,6 +28,7 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
+		<dockerhub.username>your-dockerhub-username</dockerhub.username>
         <spring-cloud.version>2025.1.3</spring-cloud.version>
 	</properties>
 	<dependencies>
@@ -78,6 +79,10 @@
             <artifactId>userService</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-kafka</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -145,6 +150,25 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+		<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>jib-maven-plugin</artifactId>
+				<version>3.4.5</version>
+				<configuration>
+					<from>
+						<image>eclipse-temurin:21-jre</image>
+					</from>
+					<to>
+						<image>docker.io/${dockerhub.username}/orbisin-posts-service:latest</image>
+					</to>
+					<container>
+						<ports>
+							<port>9010</port>
+						</ports>
+						<creationTime>USE_CURRENT_TIMESTAMP</creationTime>
+					</container>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

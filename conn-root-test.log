@@ -1,0 +1,531 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.smit.orbisIn:connectionsService >-----------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.8:run (default-cli) > test-compile @ connectionsService >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ connectionsService ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ connectionsService ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ connectionsService ---
+[INFO] skip non existing resourceDirectory H:\Projects\Java Projects\Microservices Projects\OrbisIn\connectionsService\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ connectionsService ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\test-classes
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by lombok.permit.Permit
+WARNING: Please consider reporting this to the maintainers of class lombok.permit.Permit
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[INFO] 
+[INFO] <<< spring-boot:4.0.8:run (default-cli) < test-compile @ connectionsService <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.8:run (default-cli) @ connectionsService ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.8)
+
+2026-10-11T17:28:50.537+05:30  INFO 16160 --- [connections-Service] [           main] c.s.o.c.ConnectionsServiceApplication    : Starting ConnectionsServiceApplication using Java 25 with PID 16160 (H:\Projects\Java Projects\Microservices Projects\OrbisIn\connectionsService\target\classes started by SMIT in H:\Projects\Java Projects\Microservices Projects\OrbisIn\connectionsService)
+2026-10-11T17:28:50.543+05:30  INFO 16160 --- [connections-Service] [           main] c.s.o.c.ConnectionsServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-10-11T17:28:51.729+05:30  INFO 16160 --- [connections-Service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2026-10-11T17:28:51.900+05:30  INFO 16160 --- [connections-Service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 158 ms. Found 0 Neo4j repository interfaces.
+2026-10-11T17:28:51.908+05:30  INFO 16160 --- [connections-Service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2026-10-11T17:28:51.939+05:30  INFO 16160 --- [connections-Service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 Neo4j repository interface.
+2026-10-11T17:28:52.325+05:30  INFO 16160 --- [connections-Service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f323c979-9af3-3052-841b-7d1700555d05
+2026-10-11T17:28:52.829+05:30  INFO 16160 --- [connections-Service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 9030 (http)
+2026-10-11T17:28:52.848+05:30  INFO 16160 --- [connections-Service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-11T17:28:52.848+05:30  INFO 16160 --- [connections-Service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-11T17:28:52.936+05:30  INFO 16160 --- [connections-Service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2320 ms
+2026-10-11T17:28:53.483+05:30  INFO 16160 --- [connections-Service] [           main] o.neo4j.driver.internal.DriverFactory    : Driver instance 1486862157 created for server uri 'neo4j+s://cea21eed.databases.neo4j.io'
+2026-10-11T17:28:53.683+05:30  WARN 16160 --- [connections-Service] [           main] o.s.d.n.c.mapping.Neo4jPersistentEntity  : The entity com.smit.orbisIn.connectionsService.entity.Person is using a Long value for storing internally generated Neo4j ids. The Neo4j internal Long Ids are deprecated, please consider using an external ID generator.
+2026-10-11T17:28:54.718+05:30  INFO 16160 --- [connections-Service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-10-11T17:28:54.866+05:30  INFO 16160 --- [connections-Service] [           main] o.a.kafka.common.config.AbstractConfig   : AdminClientConfig values: 
+	bootstrap.controllers = []
+	bootstrap.servers = [orbisin-notification-service-smitroy4.h.aivencloud.com:16752]
+	client.dns.lookup = use_all_dns_ips
+	client.id = connections-Service-admin-0
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = false
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = SCRAM-SHA-256
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = H:/Projects/Java Projects/Microservices Projects/OrbisIn/connectionsService/kafka-truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+
+2026-10-11T17:28:55.016+05:30  INFO 16160 --- [connections-Service] [           main] o.a.k.c.s.authenticator.AbstractLogin    : Successfully logged in.
+2026-10-11T17:28:55.066+05:30  INFO 16160 --- [connections-Service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-10-11T17:28:55.067+05:30  INFO 16160 --- [connections-Service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-10-11T17:28:55.067+05:30  INFO 16160 --- [connections-Service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1791719935065
+2026-10-11T17:29:01.607+05:30  INFO 16160 --- [connections-Service] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-10-11T17:29:01.608+05:30  INFO 16160 --- [connections-Service] [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-10-11T17:29:01.608+05:30  INFO 16160 --- [connections-Service] [           main] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-10-11T17:29:01.609+05:30  INFO 16160 --- [connections-Service] [Service-admin-0] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for connections-Service-admin-0 unregistered
+2026-10-11T17:29:01.617+05:30  INFO 16160 --- [connections-Service] [Service-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-10-11T17:29:01.618+05:30  INFO 16160 --- [connections-Service] [Service-admin-0] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-10-11T17:29:01.618+05:30  INFO 16160 --- [connections-Service] [Service-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-10-11T17:29:01.637+05:30  INFO 16160 --- [connections-Service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 9030 (http) with context path '/api/v1/connections'
+2026-10-11T17:29:01.675+05:30  INFO 16160 --- [connections-Service] [           main] o.a.kafka.common.config.AbstractConfig   : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [orbisin-notification-service-smitroy4.h.aivencloud.com:16752]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-connections-service-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connections-service
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.rebootstrap.trigger.ms = 300000
+	metadata.recovery.strategy = rebootstrap
+	metric.reporters = [org.apache.kafka.common.metrics.JmxReporter]
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = SCRAM-SHA-256
+	sasl.oauthbearer.assertion.algorithm = RS256
+	sasl.oauthbearer.assertion.claim.aud = null
+	sasl.oauthbearer.assertion.claim.exp.seconds = 300
+	sasl.oauthbearer.assertion.claim.iss = null
+	sasl.oauthbearer.assertion.claim.jti.include = false
+	sasl.oauthbearer.assertion.claim.nbf.seconds = 60
+	sasl.oauthbearer.assertion.claim.sub = null
+	sasl.oauthbearer.assertion.file = null
+	sasl.oauthbearer.assertion.private.key.file = null
+	sasl.oauthbearer.assertion.private.key.passphrase = null
+	sasl.oauthbearer.assertion.template.file = null
+	sasl.oauthbearer.client.credentials.client.id = null
+	sasl.oauthbearer.client.credentials.client.secret = null
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.jwt.retriever.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtRetriever
+	sasl.oauthbearer.jwt.validator.class = class org.apache.kafka.common.security.oauthbearer.DefaultJwtValidator
+	sasl.oauthbearer.scope = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	share.acknowledgement.mode = implicit
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = H:/Projects/Java Projects/Microservices Projects/OrbisIn/connectionsService/kafka-truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-10-11T17:29:01.716+05:30  INFO 16160 --- [connections-Service] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-10-11T17:29:01.731+05:30  INFO 16160 --- [connections-Service] [           main] o.a.k.c.s.authenticator.AbstractLogin    : Successfully logged in.
+2026-10-11T17:29:01.783+05:30  INFO 16160 --- [connections-Service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 4.1.2
+2026-10-11T17:29:01.783+05:30  INFO 16160 --- [connections-Service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c82fd9b934b4c1e6
+2026-10-11T17:29:01.784+05:30  INFO 16160 --- [connections-Service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1791719941783
+2026-10-11T17:29:01.795+05:30  INFO 16160 --- [connections-Service] [           main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-connections-service-1, groupId=connections-service] Subscribed to topic(s): user_topic
+2026-10-11T17:29:01.822+05:30  INFO 16160 --- [connections-Service] [           main] c.s.o.c.ConnectionsServiceApplication    : Started ConnectionsServiceApplication in 11.929 seconds (process running for 12.752)
+2026-10-11T17:29:02.234+05:30  INFO 16160 --- [connections-Service] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-connections-service-1, groupId=connections-service] Cluster ID: d4145513-8192-5f4a-dafa-64f19c3c455f
+2026-10-11T17:29:02.236+05:30  INFO 16160 --- [connections-Service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-connections-service-1, groupId=connections-service] Discovered group coordinator 143.244.128.9:16752 (id: 2147483643 rack: null isFenced: false)
+2026-10-11T17:29:06.769+05:30  INFO 16160 --- [connections-Service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-connections-service-1, groupId=connections-service] (Re-)joining group
+2026-10-11T17:29:07.145+05:30  INFO 16160 --- [connections-Service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-connections-service-1, groupId=connections-service] Request joining group due to: need to re-join with the given member-id: consumer-connections-service-1-620fc3b1-d6c7-4bca-bed5-2bf59cb2078c
+2026-10-11T17:29:07.146+05:30  INFO 16160 --- [connections-Service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-connections-service-1, groupId=connections-service] (Re-)joining group
+2026-10-11T17:29:10.199+05:30  INFO 16160 --- [connections-Service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-connections-service-1, groupId=connections-service] Successfully joined group with generation Generation{generationId=1, memberId='consumer-connections-service-1-620fc3b1-d6c7-4bca-bed5-2bf59cb2078c', protocol='range'}
+2026-10-11T17:29:10.209+05:30  INFO 16160 --- [connections-Service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-connections-service-1, groupId=connections-service] Finished assignment for group at generation 1: {consumer-connections-service-1-620fc3b1-d6c7-4bca-bed5-2bf59cb2078c=Assignment(partitions=[user_topic-0])}
+2026-10-11T17:29:10.268+05:30  INFO 16160 --- [connections-Service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-connections-service-1, groupId=connections-service] Successfully synced group in generation Generation{generationId=1, memberId='consumer-connections-service-1-620fc3b1-d6c7-4bca-bed5-2bf59cb2078c', protocol='range'}
+2026-10-11T17:29:10.269+05:30  INFO 16160 --- [connections-Service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-connections-service-1, groupId=connections-service] Notifying assignor about the new Assignment(partitions=[user_topic-0])
+2026-10-11T17:29:10.272+05:30  INFO 16160 --- [connections-Service] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-connections-service-1, groupId=connections-service] Adding newly assigned partitions: [user_topic-0]
+2026-10-11T17:29:10.324+05:30  INFO 16160 --- [connections-Service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-connections-service-1, groupId=connections-service] Found no committed offset for partition user_topic-0
+2026-10-11T17:29:15.247+05:30  INFO 16160 --- [connections-Service] [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-connections-service-1, groupId=connections-service] Resetting offset for partition user_topic-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[143.244.128.9:16752 (id: 4 rack: blr1 isFenced: false)], epoch=0}}.
+2026-10-11T17:29:15.248+05:30  INFO 16160 --- [connections-Service] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : connections-service: partitions assigned: [user_topic-0]
+2026-10-11T17:29:15.424+05:30  INFO 16160 --- [connections-Service] [ntainer#0-0-C-1] c.s.o.c.consumer.UserEventConsumer       : Received UserCreatedEvent for userId: 1
+2026-10-11T17:29:15.527+05:30 ERROR 16160 --- [connections-Service] [ntainer#0-0-C-1] c.s.o.c.consumer.UserEventConsumer       : Failed to handle UserCreatedEvent payload: {"userId":1,"name":"E2E User","email":"e2e.user@example.com"}
+
+org.springframework.transaction.TransactionSystemException: Could not open a new Neo4j session: Driver execution failed
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:256) ~[spring-data-neo4j-8.0.7.jar:8.0.7]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:134) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.data.neo4j.core.Neo4jTemplate$DefaultExecutableQuery.getSingleResult(Neo4jTemplate.java:1451) ~[spring-data-neo4j-8.0.7.jar:8.0.7]
+	at org.springframework.data.neo4j.repository.query.Neo4jQueryExecution$DefaultQueryExecution.execute(Neo4jQueryExecution.java:54) ~[spring-data-neo4j-8.0.7.jar:8.0.7]
+	at org.springframework.data.neo4j.repository.query.AbstractNeo4jQuery.execute(AbstractNeo4jQuery.java:138) ~[spring-data-neo4j-8.0.7.jar:8.0.7]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.0.7.jar:4.0.7]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.0.7.jar:4.0.7]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:167) ~[spring-data-commons-4.0.7.jar:4.0.7]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.0.7.jar:4.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.0.7.jar:4.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.9.jar:7.0.9]
+	at jdk.proxy2/jdk.proxy2.$Proxy102.findByUserId(Unknown Source) ~[na:na]
+	at com.smit.orbisIn.connectionsService.consumer.UserEventConsumer.handleUserCreated(UserEventConsumer.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:168) ~[spring-messaging-7.0.9.jar:7.0.9]
+	at org.springframework.kafka.listener.adapter.KotlinAwareInvocableHandlerMethod.doInvoke(KotlinAwareInvocableHandlerMethod.java:48) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-7.0.9.jar:7.0.9]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:80) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:489) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:426) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:52) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2993) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2972) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2882) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2724) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2618) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2249) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1604) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1507) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1368) ~[spring-kafka-4.0.7.jar:4.0.7]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1825) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+Caused by: org.neo4j.driver.exceptions.Neo4jException: Driver execution failed
+	at org.neo4j.driver.internal.util.ErrorUtil.rethrowAsyncException(ErrorUtil.java:67) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+	at org.neo4j.driver.internal.util.Futures.blockingGet(Futures.java:63) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+	at org.neo4j.driver.internal.InternalSession.lambda$beginTransaction$5(InternalSession.java:108) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+	at org.neo4j.driver.internal.observation.util.ObservationUtil.observe(ObservationUtil.java:40) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+	at org.neo4j.driver.internal.InternalSession.beginTransaction(InternalSession.java:107) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+	at org.neo4j.driver.internal.InternalSession.beginTransaction(InternalSession.java:102) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:245) ~[spring-data-neo4j-8.0.7.jar:8.0.7]
+	... 43 common frames omitted
+Caused by: java.net.UnknownHostException: No such host is known (cea21eed.databases.neo4j.io)
+	... 49 common frames omitted
+	Suppressed: org.neo4j.driver.internal.util.ErrorUtil$InternalExceptionCause
+		at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+		at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+		at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134) ~[na:na]
+		at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712) ~[na:na]
+		at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060) ~[na:na]
+		at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702) ~[na:na]
+		at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582) ~[na:na]
+		at org.neo4j.bolt.connection.DefaultDomainNameResolver.resolve(DefaultDomainNameResolver.java:33) ~[neo4j-bolt-connection-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RediscoveryImpl.resolveAllByDomainName(RediscoveryImpl.java:480) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RediscoveryImpl.resolve(RediscoveryImpl.java:437) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RediscoveryImpl.lookupOnInitialRouter(RediscoveryImpl.java:231) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RediscoveryImpl.lookupOnInitialRouterThenOnKnownRouters(RediscoveryImpl.java:177) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RediscoveryImpl.lookup(RediscoveryImpl.java:137) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RediscoveryImpl.lookupClusterComposition(RediscoveryImpl.java:115) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RediscoveryImpl.lookupClusterComposition(RediscoveryImpl.java:103) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RoutingTableRegistryImpl.ensureDatabaseNameIsCompleted(RoutingTableRegistryImpl.java:147) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RoutingTableRegistryImpl.ensureRoutingTable(RoutingTableRegistryImpl.java:110) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.RoutedBoltConnectionSource.getConnection(RoutedBoltConnectionSource.java:161) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.RoutedBoltConnectionSource.getConnection(RoutedBoltConnectionSource.java:74) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.driver.internal.adaptedbolt.ProviderClosingBoltConnectionSource.getConnection(ProviderClosingBoltConnectionSource.java:44) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.adaptedbolt.ProviderClosingBoltConnectionSource.getConnection(ProviderClosingBoltConnectionSource.java:28) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.adaptedbolt.AdaptingDriverBoltConnectionSource.lambda$getConnection$0(AdaptingDriverBoltConnectionSource.java:52) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.observation.util.ObservationUtil.scoped(ObservationUtil.java:54) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.adaptedbolt.AdaptingDriverBoltConnectionSource.getConnection(AdaptingDriverBoltConnectionSource.java:52) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.async.NetworkSession.acquireAdaptedConnection(NetworkSession.java:595) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.async.NetworkSession.lambda$acquireConnection$31(NetworkSession.java:519) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at java.base/java.util.concurrent.CompletableFuture.uniComposeStage(CompletableFuture.java:1208) ~[na:na]
+		at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:2368) ~[na:na]
+		at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:144) ~[na:na]
+		at org.neo4j.driver.internal.async.NetworkSession.acquireConnection(NetworkSession.java:519) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.async.NetworkSession.lambda$beginTransactionAsync$18(NetworkSession.java:379) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at java.base/java.util.concurrent.CompletableFuture.uniComposeStage(CompletableFuture.java:1208) ~[na:na]
+		at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:2368) ~[na:na]
+		at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:144) ~[na:na]
+		at org.neo4j.driver.internal.async.NetworkSession.beginTransactionAsync(NetworkSession.java:379) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.async.NetworkSession.beginTransactionAsync(NetworkSession.java:355) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.InternalSession.lambda$beginTransaction$5(InternalSession.java:109) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		... 47 common frames omitted
+
+2026-10-11T17:30:33.971+05:30  INFO 16160 --- [connections-Service] [nio-9030-exec-2] o.a.c.c.C.[.[.[/api/v1/connections]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-11T17:30:33.971+05:30  INFO 16160 --- [connections-Service] [nio-9030-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-11T17:30:33.973+05:30  INFO 16160 --- [connections-Service] [nio-9030-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-11T17:30:34.017+05:30  INFO 16160 --- [connections-Service] [nio-9030-exec-2] c.s.o.c.service.ConnectionsService       : Getting first degree connections of user with ID: 1
+2026-10-11T17:30:34.105+05:30 ERROR 16160 --- [connections-Service] [nio-9030-exec-2] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/api/v1/connections] threw exception [Request processing failed: org.springframework.transaction.TransactionSystemException: Could not open a new Neo4j session: Driver execution failed] with root cause
+
+java.net.UnknownHostException: No such host is known (cea21eed.databases.neo4j.io)
+	at org.neo4j.driver.internal.util.Futures.blockingGet(Futures.java:63) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+	at org.neo4j.driver.internal.InternalSession.lambda$beginTransaction$5(InternalSession.java:108) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+	at org.neo4j.driver.internal.observation.util.ObservationUtil.observe(ObservationUtil.java:40) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+	at org.neo4j.driver.internal.InternalSession.beginTransaction(InternalSession.java:107) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+	at org.neo4j.driver.internal.InternalSession.beginTransaction(InternalSession.java:102) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+	at org.springframework.data.neo4j.core.transaction.Neo4jTransactionManager.doBegin(Neo4jTransactionManager.java:245) ~[spring-data-neo4j-8.0.7.jar:8.0.7]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:134) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.data.neo4j.core.Neo4jTemplate$DefaultExecutableQuery.getResults(Neo4jTemplate.java:1435) ~[spring-data-neo4j-8.0.7.jar:8.0.7]
+	at org.springframework.data.neo4j.repository.query.Neo4jQueryExecution$DefaultQueryExecution.execute(Neo4jQueryExecution.java:51) ~[spring-data-neo4j-8.0.7.jar:8.0.7]
+	at org.springframework.data.neo4j.repository.query.AbstractNeo4jQuery.execute(AbstractNeo4jQuery.java:138) ~[spring-data-neo4j-8.0.7.jar:8.0.7]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.0.7.jar:4.0.7]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.0.7.jar:4.0.7]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:167) ~[spring-data-commons-4.0.7.jar:4.0.7]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.0.7.jar:4.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.0.7.jar:4.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135) ~[spring-tx-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.9.jar:7.0.9]
+	at jdk.proxy2/jdk.proxy2.$Proxy102.getFirstDegreeConnections(Unknown Source) ~[na:na]
+	at com.smit.orbisIn.connectionsService.service.ConnectionsService.getFirstDegreeConnectionsOfUser(ConnectionsService.java:22) ~[classes/:na]
+	at com.smit.orbisIn.connectionsService.controller.ConnectionController.getFirstDegreeConnections(ConnectionController.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.9.jar:7.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.24.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+	Suppressed: org.neo4j.driver.internal.util.ErrorUtil$InternalExceptionCause
+		at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+		at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+		at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1134) ~[na:na]
+		at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1712) ~[na:na]
+		at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1060) ~[na:na]
+		at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1702) ~[na:na]
+		at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1582) ~[na:na]
+		at org.neo4j.bolt.connection.DefaultDomainNameResolver.resolve(DefaultDomainNameResolver.java:33) ~[neo4j-bolt-connection-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RediscoveryImpl.resolveAllByDomainName(RediscoveryImpl.java:480) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RediscoveryImpl.resolve(RediscoveryImpl.java:437) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RediscoveryImpl.lookupOnInitialRouter(RediscoveryImpl.java:231) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RediscoveryImpl.lookupOnInitialRouterThenOnKnownRouters(RediscoveryImpl.java:177) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RediscoveryImpl.lookup(RediscoveryImpl.java:137) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RediscoveryImpl.lookupClusterComposition(RediscoveryImpl.java:115) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RediscoveryImpl.lookupClusterComposition(RediscoveryImpl.java:103) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RoutingTableRegistryImpl.ensureDatabaseNameIsCompleted(RoutingTableRegistryImpl.java:147) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.impl.cluster.RoutingTableRegistryImpl.ensureRoutingTable(RoutingTableRegistryImpl.java:110) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.RoutedBoltConnectionSource.getConnection(RoutedBoltConnectionSource.java:161) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.bolt.connection.routed.RoutedBoltConnectionSource.getConnection(RoutedBoltConnectionSource.java:74) ~[neo4j-bolt-connection-routed-11.0.2.jar:na]
+		at org.neo4j.driver.internal.adaptedbolt.ProviderClosingBoltConnectionSource.getConnection(ProviderClosingBoltConnectionSource.java:44) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.adaptedbolt.ProviderClosingBoltConnectionSource.getConnection(ProviderClosingBoltConnectionSource.java:28) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.adaptedbolt.AdaptingDriverBoltConnectionSource.lambda$getConnection$0(AdaptingDriverBoltConnectionSource.java:52) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.observation.util.ObservationUtil.scoped(ObservationUtil.java:54) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.adaptedbolt.AdaptingDriverBoltConnectionSource.getConnection(AdaptingDriverBoltConnectionSource.java:52) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.async.NetworkSession.acquireAdaptedConnection(NetworkSession.java:595) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.async.NetworkSession.lambda$acquireConnection$31(NetworkSession.java:519) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at java.base/java.util.concurrent.CompletableFuture.uniComposeStage(CompletableFuture.java:1208) ~[na:na]
+		at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:2368) ~[na:na]
+		at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:144) ~[na:na]
+		at org.neo4j.driver.internal.async.NetworkSession.acquireConnection(NetworkSession.java:519) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.async.NetworkSession.lambda$beginTransactionAsync$18(NetworkSession.java:379) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at java.base/java.util.concurrent.CompletableFuture.uniComposeStage(CompletableFuture.java:1208) ~[na:na]
+		at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:2368) ~[na:na]
+		at java.base/java.util.concurrent.CompletableFuture.thenCompose(CompletableFuture.java:144) ~[na:na]
+		at org.neo4j.driver.internal.async.NetworkSession.beginTransactionAsync(NetworkSession.java:379) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.async.NetworkSession.beginTransactionAsync(NetworkSession.java:355) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		at org.neo4j.driver.internal.InternalSession.lambda$beginTransaction$5(InternalSession.java:109) ~[neo4j-java-driver-6.1.0.jar:6.1.0-7652d3c3f6d7faa34e9b724e7cc02419425f3575]
+		... 73 common frames omitted
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:54 min
+[INFO] Finished at: 2026-10-11T17:30:35+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:4.0.8:run (default-cli) on project connectionsService: Process terminated with exit code: -1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

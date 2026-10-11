@@ -20,6 +20,7 @@ public class AuthService {
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
     private final JwtService jwtService;
+    private final com.smit.orbisIn.userService.producer.UserEventProducer userEventProducer;
 
     public UserDto signUp(SignupRequestDto signupRequestDto) {
         log.info("Signup a user with email: {}", signupRequestDto.getEmail());
@@ -33,7 +34,18 @@ public class AuthService {
         user.setPassword(BCrypt.hash(signupRequestDto.getPassword()));
 
         user = userRepository.save(user);
-        return modelMapper.map(user, UserDto.class);
+        UserDto userDto = modelMapper.map(user, UserDto.class);
+
+        // Publish event (non-blocking for signup success: failures are logged only)
+        try {
+            userEventProducer.sendUserCreated(
+                    new com.smit.orbisIn.userService.event.UserCreatedEvent(
+                            user.getId(), user.getName(), user.getEmail()));
+        } catch (Exception e) {
+            log.error("Signup succeeded but failed to publish UserCreatedEvent for userId: {}", user.getId(), e);
+        }
+
+        return userDto;
     }
 
     public String login(LoginRequestDto loginRequestDto) {
