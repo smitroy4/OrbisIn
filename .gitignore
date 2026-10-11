@@ -1,3 +1,4 @@
 # Environment files with secrets (per-service .env holds real credentials locally)
 **/.env
 *.jks
+.idea
