@@ -4,36 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5954344-e304-4b4e-894a-c0dfbb3f2413" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apiGateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apiGateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/apiGateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connectionsService/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/connectionsService/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connectionsService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/connectionsService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connectionsService/src/main/java/com/smit/orbisIn/connectionsService/controller/ConnectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/connectionsService/src/main/java/com/smit/orbisIn/connectionsService/controller/ConnectionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connectionsService/src/main/java/com/smit/orbisIn/connectionsService/repository/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/connectionsService/src/main/java/com/smit/orbisIn/connectionsService/repository/PersonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connectionsService/src/main/java/com/smit/orbisIn/connectionsService/service/ConnectionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/connectionsService/src/main/java/com/smit/orbisIn/connectionsService/service/ConnectionsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connectionsService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/connectionsService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discoveryServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discoveryServer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postsService/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postsService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/PostsServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/PostsServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/dto/PostCreateRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/dto/PostCreateRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/dto/PostDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/dto/PostDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/entity/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/service/PostLikeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/service/PostLikeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/java/com/smit/orbisIn/postsService/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postsService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/postsService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userService/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/userService/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/userService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userService/src/main/java/com/smit/orbisIn/userService/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/java/com/smit/orbisIn/userService/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/userService/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="b5954344-e304-4b4e-894a-c0dfbb3f2413" name="Changes" comment="Add user context management and event publishing for user and connection actions; Uploader service conflicting">
+      <change beforePath="$PROJECT_DIR$/uploaderService/src/main/java/com/smit/orbisIn/uploaderService/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/uploaderService/src/main/java/com/smit/orbisIn/uploaderService/exception/GlobalExceptionHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +53,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ApiGatewayApplication.executor": "Run",
     "Spring Boot.ConnectionsServiceApplication.executor": "Run",
     "Spring Boot.DiscoveryServerApplication.executor": "Run",
@@ -95,7 +68,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
-    "settings.editor.selected.configurable": "settings.sync"
+    "settings.editor.selected.configurable": "settings.sync",
+    "ts.external.directory.path": "H:\\Projects\\Java Projects\\Microservices Projects\\OrbisIn\\frontend\\node_modules\\typescript\\lib"
   }
 }]]></component>
   <component name="RunDashboard">
@@ -115,7 +89,7 @@
               <entry key="DiscoveryServerApplication" value="STOPPED" />
               <entry key="NotificationServiceApplication" value="STOPPED" />
               <entry key="PostsServiceApplication" value="FAILED" />
-              <entry key="UploaderServiceApplication" value="FAILED" />
+              <entry key="UploaderServiceApplication" value="STOPPED" />
               <entry key="UserServiceApplication" value="STOPPED" />
             </map>
           </value>
@@ -150,9 +124,22 @@
       <option name="presentableId" value="Default" />
       <updated>1791737684651</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add user context management and event publishing for user and connection actions; Uploader service conflicting">
+      <option name="closed" value="true" />
+      <created>1791744402037</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1791744402038</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add user context management and event publishing for user and connection actions; Uploader service conflicting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add user context management and event publishing for user and connection actions; Uploader service conflicting" />
   </component>
 </project>

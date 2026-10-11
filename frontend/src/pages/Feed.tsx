@@ -10,7 +10,6 @@ import { useAuth } from "../lib/auth";
 import { href } from "../lib/router";
 import { PostCard, toggleLike } from "../components/posts";
 import { Avatar } from "../components/chrome";
-import { ArticleIcon, VideoIcon } from "../icons";
 
 interface FeedPost extends PostDto {
   authorName: string;
@@ -230,7 +229,7 @@ export function Feed({ query }: { query: string }) {
               )}
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
                 <label className="btn small secondary" style={{ cursor: "pointer" }}>
-                  {uploading ? "Uploading…" : "📷 Media"}
+                  {uploading ? "Uploading…" : "Upload"}
                   <input
                     type="file"
                     accept="image/*"
@@ -251,10 +250,6 @@ export function Feed({ query }: { query: string }) {
                 </button>
               </div>
             </form>
-            <div className="composer-actions">
-              <span className="caction"><VideoIcon /> Event</span>
-              <span className="caction"><ArticleIcon /> Write article</span>
-            </div>
           </div>
 
           <div className="toolbar">

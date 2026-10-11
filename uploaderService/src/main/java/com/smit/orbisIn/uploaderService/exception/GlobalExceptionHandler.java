@@ -18,6 +18,12 @@ public class GlobalExceptionHandler {
         return error(HttpStatus.BAD_REQUEST, e.getMessage());
     }
 
+    @ExceptionHandler(org.springframework.web.server.ResponseStatusException.class)
+    public ResponseEntity<Map<String, Object>> status(org.springframework.web.server.ResponseStatusException e) {
+        HttpStatus status = HttpStatus.resolve(e.getStatusCode().value());
+        return error(status != null ? status : HttpStatus.INTERNAL_SERVER_ERROR, e.getReason());
+    }
+
     @ExceptionHandler(StorageNotConfiguredException.class)
     public ResponseEntity<Map<String, Object>> notConfigured(StorageNotConfiguredException e) {
         return error(HttpStatus.SERVICE_UNAVAILABLE, e.getMessage());

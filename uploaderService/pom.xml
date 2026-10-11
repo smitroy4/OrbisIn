@@ -96,7 +96,7 @@
 					</to>
 					<container>
 						<ports>
-							<port>9050</port>
+							<port>9060</port>
 						</ports>
 						<creationTime>USE_CURRENT_TIMESTAMP</creationTime>
 					</container>
