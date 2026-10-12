@@ -7,17 +7,14 @@ A LinkedIn-inspired professional networking platform built as a **polyglot, even
   <img src="https://img.shields.io/badge/SPRING%20BOOT-4.x-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot 4.x" />
   <img src="https://img.shields.io/badge/SPRING%20CLOUD-2025.1.3-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring Cloud 2025.1.3" />
   <img src="https://img.shields.io/badge/APACHE%20KAFKA-EVENT%20DRIVEN-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Apache Kafka" />
-  <br />
   <img src="https://img.shields.io/badge/MICROSERVICES-6%20SERVICES-0A66C2?style=for-the-badge&logo=spring&logoColor=white" alt="Microservices" />
   <img src="https://img.shields.io/badge/EUREKA-SERVICE%20DISCOVERY-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Eureka" />
   <img src="https://img.shields.io/badge/API%20GATEWAY-JWT%20AUTH-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white" alt="API Gateway" />
   <img src="https://img.shields.io/badge/OPENFEIGN-SYNC%20CALLS-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="OpenFeign" />
-  <br />
   <img src="https://img.shields.io/badge/POSTGRESQL-NEON-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   <img src="https://img.shields.io/badge/NEO4J-GRAPH%20DB-4581C3?style=for-the-badge&logo=neo4j&logoColor=white" alt="Neo4j" />
   <img src="https://img.shields.io/badge/MONGODB-NOTIFICATIONS-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
   <img src="https://img.shields.io/badge/S3-OBJECT%20STORAGE-569A31?style=for-the-badge&logo=amazons3&logoColor=white" alt="S3" />
-  <br />
   <img src="https://img.shields.io/badge/JWT-JJWT%200.12.6-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT" />
   <img src="https://img.shields.io/badge/DOCKER-CONTAINERIZED-4285F4?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
   <img src="https://img.shields.io/badge/ORACLE-DEPLOYED-F80000?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTcuOSAxOC40YTYuNCA2LjQgMCAxIDEgMC0xMi44aDguMmE2LjQgNi40IDAgMSAxIDAgMTIuOHptOC4xLTIuMWE0LjMgNC4zIDAgMCAwIDAtOC42SDhhNC4zIDQuMyAwIDAgMCAwIDguNnoiLz48L3N2Zz4=" alt="Deployed on OCI" />
