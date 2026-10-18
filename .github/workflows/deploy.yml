@@ -41,6 +41,9 @@ jobs:
         run: mvn -B -f apiGateway/pom.xml compile jib:build -Ddockerhub.username=${{ secrets.DOCKERHUB_USERNAME }} -Dimage.tag=${GITHUB_SHA}
 
       - name: Build and push User Service
+        run: mvn -B -f userService/pom.xml install -DskipTests -Ddockerhub.username=${{ secrets.DOCKERHUB_USERNAME }}
+
+      - name: Build and push User Service image
         run: mvn -B -f userService/pom.xml compile jib:build -Ddockerhub.username=${{ secrets.DOCKERHUB_USERNAME }} -Dimage.tag=${GITHUB_SHA}
 
       - name: Build and push Posts Service
