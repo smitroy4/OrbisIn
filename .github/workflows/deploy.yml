@@ -1,0 +1,56 @@
+name: OrbisIn CI
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v5
+        with:
+          maven-version: '3.9.9'
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push Discovery Server
+        run: mvn -B -f discoveryServer/pom.xml compile jib:build -Ddockerhub.username=${{ secrets.DOCKERHUB_USERNAME }} -Dimage.tag=${GITHUB_SHA}
+
+      - name: Build and push API Gateway
+        run: mvn -B -f apiGateway/pom.xml compile jib:build -Ddockerhub.username=${{ secrets.DOCKERHUB_USERNAME }} -Dimage.tag=${GITHUB_SHA}
+
+      - name: Build and push User Service
+        run: mvn -B -f userService/pom.xml compile jib:build -Ddockerhub.username=${{ secrets.DOCKERHUB_USERNAME }} -Dimage.tag=${GITHUB_SHA}
+
+      - name: Build and push Posts Service
+        run: mvn -B -f postsService/pom.xml compile jib:build -Ddockerhub.username=${{ secrets.DOCKERHUB_USERNAME }} -Dimage.tag=${GITHUB_SHA}
+
+      - name: Build and push Connections Service
+        run: mvn -B -f connectionsService/pom.xml compile jib:build -Ddockerhub.username=${{ secrets.DOCKERHUB_USERNAME }} -Dimage.tag=${GITHUB_SHA}
+
+      - name: Build and push Notification Service
+        run: mvn -B -f notificationService/pom.xml compile jib:build -Ddockerhub.username=${{ secrets.DOCKERHUB_USERNAME }} -Dimage.tag=${GITHUB_SHA}
+
+      - name: Build and push Uploader Service
+        run: mvn -B -f uploaderService/pom.xml compile jib:build -Ddockerhub.username=${{ secrets.DOCKERHUB_USERNAME }} -Dimage.tag=${GITHUB_SHA}
